@@ -56,7 +56,7 @@ wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA
 
 clear
 
-echo -e "Starting Astrominer using wallet:${GREEN} $WALLET.... ${NC}"
+echo -e "Starting Astrominer using wallet:${GREEN} $WALLET....  ${NC}"
 
 # Run Miner
 
