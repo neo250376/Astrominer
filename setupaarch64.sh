@@ -50,6 +50,8 @@ do
         fi
 done
 
+echoe -e "\n"
+
             echo -n "Enter number of threads to use: "
             read THREADS
 
