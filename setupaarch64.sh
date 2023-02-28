@@ -43,8 +43,6 @@ do
         fi
 done
 
-
-
 [[ -f $MINER.tar.gz ]] && rm -f $MINER.tar.gz
 [[ -d $MINER ]] && rm -rf $MINER
 
