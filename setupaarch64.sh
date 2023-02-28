@@ -8,6 +8,7 @@ MINER_PORT=10300
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 RED='\033[0;31m'
+YELLOW='\033[0;33m'
 
 echo -e -n "${GREEN}Enter your Dero wallet address: ${NC}"
 read WALLET
@@ -52,7 +53,7 @@ done
 [[ -f $MINER.tar.gz ]] && rm -f $MINER.tar.gz
 [[ -d $MINER ]] && rm -rf $MINER
 
-echo "Downloading Latest Astrominer version ...."
+echo -e -n "${RED} Downloading Latest Astrominer version .... ${NC}"
 
 wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINER.tar.gz
 
@@ -62,7 +63,7 @@ read -t 5 -p "Astrominer downloaded, running miner"
 
 clear
 
-echo -e -n "Starting Astrominer using wallet:${RED} $WALLET  ${NC}"
+echo -e -n "Starting Astrominer using wallet:${YELLOW} $WALLET  ${NC}"
 
 echo -e "\n"
 
