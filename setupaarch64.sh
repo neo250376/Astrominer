@@ -67,6 +67,8 @@ read -t 5 -p "Astrominer downloaded, running miner"
 
 clear
 
+echo -e "\n"
+
 echo -e -n "Starting Astrominer using wallet:${YELLOW} $WALLET  ${NC}"
 
 echo -e "\n"
