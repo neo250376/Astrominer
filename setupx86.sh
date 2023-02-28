@@ -50,6 +50,11 @@ do
         fi
 done
 
+echoe -e "\n"
+
+            echo -n "Enter number of threads to use: "
+            read THREADS
+
 echo -e "\n"
 
 [[ -f $MINER.tar.gz ]] && rm -f $MINER.tar.gz
