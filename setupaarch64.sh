@@ -7,6 +7,7 @@ MINER_PORT=10300
 
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
+RED='\033[0;31m'
 
 echo -e -n "${GREEN}Enter your Dero wallet address: ${NC}"
 read WALLET
@@ -61,7 +62,7 @@ read -t 5 -p "Astrominer downloaded, running miner"
 
 clear
 
-echo -e -n "Starting Astrominer using wallet:${GREEN} $WALLET  ${NC}"
+echo -e -n "Starting Astrominer using wallet:${RED} $WALLET  ${NC}"
 
 echo -e "\n"
 
