@@ -23,7 +23,7 @@ done
 
 echo "Using Wallet Address: $WALLET"
 
-NODE=dero.rabidmining.com:$MINER_PORT
+NODE=dero-node-overlode.mysrv.cloud:$MINER_PORT
 
 ANSWER=N
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
