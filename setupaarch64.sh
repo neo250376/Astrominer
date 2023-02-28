@@ -45,7 +45,7 @@ done
 
 echo "Downloading Latest ($MINER) version ...."
 
-wget -c https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINER.tar.gz
+wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINER.tar.gz
 
 [[ ! -d $MINER ]] && tar -zxpvf $MINER.tar.gz
 
