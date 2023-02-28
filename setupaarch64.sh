@@ -13,8 +13,6 @@ read WALLET
 
 ANSWER=N
 
-echo -e "\n"
-
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
         echo -n "Is this ($WALLET) correct? (y)"
