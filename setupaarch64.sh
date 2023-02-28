@@ -15,12 +15,12 @@ ANSWER=N
 
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
-        echo -n "Is this ${GREEN}($WALLET)${NC} correct? (y)"
+        echo -e -n "Is this ${GREEN} ($WALLET) ${NC} correct? (y)"
         read ANSWER
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
-               echo -n "${GREEN}Enter your Dero wallet address: ${NC}"
+               echo -e -n "${GREEN}Enter your Dero wallet address: ${NC}"
                 read WALLET
         fi
 done
