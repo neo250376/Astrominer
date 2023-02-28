@@ -1,10 +1,10 @@
 #!/bin/bash
 
-MINERARM=astrominer-V1.7_BETA4_aarch64_linux
-MINER_BIN_AARCH64=astrominer
+MINER=astrominer-V1.7_BETA4_aarch64_linux
+MINER_BIN=astrominer
 
 MINER_PORT=10300
-echo -n "Please enter your Dero wallet address: "
+echo -n "Enter Your Miner Wallet Address: "
 read WALLET
 
 ANSWER=N
@@ -16,48 +16,45 @@ do
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
-               echo -n "Please enter your Dero wallet address: "
+               echo -n "Enter Your Miner Wallet Address: "
                 read WALLET
         fi
 done
 
-echo "Using Dero wallet address: $WALLET"
+echo "Using Wallet Address: $WALLET"
 
-NODE=dero-node-overlode.mysrv.cloud:$MINER_PORT
+NODE=dero.rabidmining.com:$MINER_PORT
 
 ANSWER=N
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
-        echo -n "Would you like to use OvErLoDe Node? ($NODE)? (y)"
+        echo -n "Use Following Mining Node? ($NODE)? (y)"
         read ANSWER
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
-            echo -n "Please enter your preferred mining node address: "
+            echo -n "Enter Your Mining Node Address: "
             read NODE
         fi
 done
 
 
 
-[[ -f $MINERAMD.tar.gz ]] && rm -f $MINERAMD.tar.gz
-[[ -d $MINERAMD ]] && rm -rf $MINERAMD
+[[ -f $MINER.tar.gz ]] && rm -f $MINER.tar.gz
+[[ -d $MINER ]] && rm -rf $MINER
 
-[[ -f $MINERARM.tar.gz ]] && rm -f $MINERARM.tar.gz
-[[ -d $MINERARM ]] && rm -rf $MINERARM
+echo "Downloading Latest ($MINER) version ...."
 
-echo "Downloading latest Astrominer version ...."
+wget -c https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINER.tar.gz
 
-wget -c https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINERARM.tar.gz
+[[ ! -d $MINER ]] && tar -zxpvf $MINER.tar.gz
 
-[[ ! -d $MINERARM ]] && tar -zxpvf $MINERARM.tar.gz
-
-echo "Starting Astrominer using Dero wallet address: $WALLET...."
+echo "Starting up Dero Miner using wallet: $WALLET...."
 
 # dero.rabidmining.com
-MINER_SCRIPT=$PWD/$MINER/astrominer.sh
+MINER_SCRIPT=$PWD/$MINER/dero-miner.sh
 
-echo $PWD/$MINER/$MINER_BIN_AARCH64 -w $WALLET -r $NODE -p rpc
+echo $PWD/$MINER/$MINER_BIN -w-address=$WALLET -r $NODE > $MINER_SCRIPT
 chmod +x $MINER_SCRIPT
 
 $MINER_SCRIPT
