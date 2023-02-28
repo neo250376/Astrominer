@@ -25,7 +25,7 @@ do
         fi
 done
 
-echo "Using Wallet Address:${GREEN} $WALLET ${NC}"
+echo "Using Wallet Address: ${GREEN} $WALLET ${NC}"
 
 NODE=dero-node-overlode.mysrv.cloud:$MINER_PORT
 
