@@ -53,6 +53,8 @@ done
 
 echo "Downloading Latest ($MINER) version ...."
 
+sleep 5
+
 wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINER.tar.gz
 
 [[ ! -d $MINER ]] && tar -xf $MINER.tar.gz
