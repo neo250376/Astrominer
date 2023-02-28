@@ -8,19 +8,19 @@ MINER_PORT=10300
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-echo -e -n "${GREEN}Enter Your Miner Wallet Address: ${NC}"
+echo -e -n "${GREEN}Enter your Dero wallet address: ${NC}"
 read WALLET
 
 ANSWER=N
 
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
-        echo -n "Is this ($WALLET) correct? (y)"
+        echo -n "Is this ${GREEN}($WALLET)${NC} correct? (y)"
         read ANSWER
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
-               echo -n "Enter Your Miner Wallet Address: "
+               echo -n "${GREEN}Enter your Dero wallet address: ${NC}"
                 read WALLET
         fi
 done
