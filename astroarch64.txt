@@ -1,5 +1,3 @@
-#!/bin/bash
-
 MINERARM=astrominer-V1.7_BETA4_aarch64_linux
 MINER_BIN_AARCH64=astrominer
 
