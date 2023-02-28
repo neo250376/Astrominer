@@ -27,7 +27,7 @@ done
 
 echo -e -n "Using Wallet Address: $WALLET"
 
-echo -e -n " " 
+echo " " 
 
 NODE=dero-node-overlode.mysrv.cloud:$MINER_PORT
 
