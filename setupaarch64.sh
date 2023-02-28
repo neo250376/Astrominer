@@ -1,8 +1,6 @@
 #!/bin/bash
 
-MINERAMD=dero_linux_amd64
-MINER_BIN_AMD=dero-miner-linux-amd64
-MINERARM=astrominer-V1.7_BETA4_aarch64_linux.tar.gz
+MINERARM=astrominer-V1.7_BETA4_aarch64_linux
 MINER_BIN_AARCH64=astrominer
 
 MINER_PORT=10300
