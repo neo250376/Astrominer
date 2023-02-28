@@ -8,7 +8,7 @@ MINER_PORT=10300
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-echo -e -n "${GREEN}Enter Your Miner Wallet Address: ${NC}"
+echo -e -n "${GREEN}Enter Your Miner Wallet Address: ${NC} \n"
 read WALLET
 
 ANSWER=N
