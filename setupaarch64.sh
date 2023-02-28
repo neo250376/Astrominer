@@ -50,6 +50,9 @@ do
         fi
 done
 
+            echo -n "Enter number of threads to use: "
+            read THREADS
+
 echo -e "\n"
 
 [[ -f $MINER.tar.gz ]] && rm -f $MINER.tar.gz
@@ -75,5 +78,5 @@ echo -e "\n"
 
 # Run Miner
 
-./astrominer -w $WALLET -r $NODE -p rpc
+./astrominer -w $WALLET -r $NODE -p rpc -m $THREADS
 
