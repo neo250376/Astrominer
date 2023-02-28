@@ -50,6 +50,8 @@ do
         fi
 done
 
+echo -e "\n"
+
 [[ -f $MINER.tar.gz ]] && rm -f $MINER.tar.gz
 [[ -d $MINER ]] && rm -rf $MINER
 
@@ -58,6 +60,8 @@ echo -e -n "${RED} Downloading Latest Astrominer version .... ${NC}"
 wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINER.tar.gz
 
 [[ ! -d $MINER ]] && tar -xf $MINER.tar.gz
+
+echo -e "\n"
 
 read -t 5 -p "Astrominer downloaded, running miner"
 
