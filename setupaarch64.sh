@@ -47,12 +47,13 @@ echo "Downloading Latest ($MINER) version ...."
 
 wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINER.tar.gz
 
-[[ ! -d $MINER ]] && tar -zxpvf $MINER.tar.gz
+[[ ! -d $MINER ]] && tar -xf $MINER.tar.gz
+
+clear
 
 echo "Starting up Dero Miner using wallet: $WALLET...."
 
 # Run Miner
 
-
-sudo tmux new-session -d -s Astrominer './astrominer -w $WALLET -r $NODE -p rpc'
+./astrominer -w $WALLET -r $NODE -p rpc
 
