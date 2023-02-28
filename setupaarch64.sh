@@ -15,7 +15,6 @@ ANSWER=N
 
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
-        echo "\n"
         echo -n "Is this ($WALLET) correct? (y)"
         read ANSWER
 
@@ -26,9 +25,7 @@ do
         fi
 done
 
-echo " "
-
-echo "Using Wallet Address: $WALLET"
+echo "Using Wallet Address:${GREEN} $WALLET ${NC}"
 
 NODE=dero-node-overlode.mysrv.cloud:$MINER_PORT
 
@@ -59,7 +56,7 @@ wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA
 
 clear
 
-echo "Starting up Dero Miner using wallet: $WALLET...."
+echo "Starting up Dero Miner using wallet:${GREEN} $WALLET....  ${NC}"
 
 # Run Miner
 
