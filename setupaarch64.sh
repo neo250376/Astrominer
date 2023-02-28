@@ -15,6 +15,7 @@ ANSWER=N
 
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
+        echo "\n"
         echo -n "Is this ($WALLET) correct? (y)"
         read ANSWER
 
