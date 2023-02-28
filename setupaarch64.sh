@@ -57,7 +57,7 @@ wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA
 
 [[ ! -d $MINER ]] && tar -xf $MINER.tar.gz
 
-read -p "Astrominer downloaded, press enter to continue....."
+read -t 5 -p "Astrominer downloaded, running miner"
 
 clear
 
