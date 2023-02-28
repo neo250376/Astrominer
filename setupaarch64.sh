@@ -13,15 +13,15 @@ read WALLET
 
 ANSWER=N
 
-echo ""
-
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
+        echo " "
         echo -n "Is this ($WALLET) correct? (y)"
         read ANSWER
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
+               echo " "
                echo -n "Enter Your Miner Wallet Address: "
                 read WALLET
         fi
@@ -33,15 +33,15 @@ NODE=dero-node-overlode.mysrv.cloud:$MINER_PORT
 
 ANSWER=N
 
-echo ""
-
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
+        echo " "
         echo -n "Use Following Mining Node? ($NODE)? (y)"
         read ANSWER
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
+            echo " "
             echo -n "Enter Your Mining Node Address: "
             read NODE
         fi
