@@ -51,13 +51,13 @@ done
 [[ -f $MINER.tar.gz ]] && rm -f $MINER.tar.gz
 [[ -d $MINER ]] && rm -rf $MINER
 
-echo "Downloading Latest ($MINER) version ...."
+echo "Downloading Latest Astrominer version ...."
 
 wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA4/$MINER.tar.gz
 
 [[ ! -d $MINER ]] && tar -xf $MINER.tar.gz
 
-        read -p "Astrominer downloaded, press enter to continue....."
+read -p "Astrominer downloaded, press enter to continue....."
 
 clear
 
