@@ -33,12 +33,12 @@ ANSWER=N
 
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
-        echo -n "Use Following Mining Node? ($NODE)? (y)"
+        echo -e -n "Use Following Mining Node? ($NODE)? (y)"
         read ANSWER
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
-            echo -n "Enter Your Mining Node Address: "
+            echo -e -n "Enter Your Mining Node Address: "
             read NODE
         fi
 done
