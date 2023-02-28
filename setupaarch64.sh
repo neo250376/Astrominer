@@ -15,17 +15,17 @@ ANSWER=N
 
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
-        echo " "
         echo -n "Is this ($WALLET) correct? (y)"
         read ANSWER
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
-               echo " "
                echo -n "Enter Your Miner Wallet Address: "
                 read WALLET
         fi
 done
+
+echo " "
 
 echo "Using Wallet Address: $WALLET"
 
@@ -35,13 +35,11 @@ ANSWER=N
 
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
-        echo " "
         echo -n "Use Following Mining Node? ($NODE)? (y)"
         read ANSWER
 
         if [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
         then
-            echo " "
             echo -n "Enter Your Mining Node Address: "
             read NODE
         fi
