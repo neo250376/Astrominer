@@ -51,12 +51,8 @@ wget -c -q https://github.com/dero-am/astrobwt-miner/releases/download/V1.7-BETA
 
 echo "Starting up Dero Miner using wallet: $WALLET...."
 
-# dero.rabidmining.com
-MINER_SCRIPT=$PWD/$MINER/dero-miner.sh
+# Run Miner
 
-echo $PWD/$MINER/$MINER_BIN -w-address=$WALLET -r $NODE > $MINER_SCRIPT
-chmod +x $MINER_SCRIPT
 
-$MINER_SCRIPT
+sudo tmux new-session -d -s Astrominer './astrominer -w $WALLET -r $NODE -p rpc'
 
-echo -e "To start miner again, run\n$ $MINER_SCRIPT"
