@@ -4,7 +4,11 @@ MINER=astrominer-V1.7_BETA4_aarch64_linux
 MINER_BIN=astrominer
 
 MINER_PORT=10300
-echo -n "Enter Your Miner Wallet Address: "
+
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+echo -e -n "${GREEN}Enter Your Miner Wallet Address: ${NC}"
 read WALLET
 
 ANSWER=N
