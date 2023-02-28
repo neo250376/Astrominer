@@ -25,7 +25,7 @@ do
         fi
 done
 
-echo -e -n "Using Wallet Address: ${GREEN} ($WALLET) ${NC}"
+echo -e -n "Using Wallet Address: $WALLET"
 
 echo -e -n " " 
 
