@@ -11,9 +11,9 @@ NC='\033[0m' # No Color
 echo -e -n "${GREEN}Enter Your Miner Wallet Address: ${NC} "
 read WALLET
 
-echo -e " \n"
-
 ANSWER=N
+
+echo -e "\n"
 
 while [[ $ANSWER != "Y" && $ANSWER != "y" && $ANSWER != "" ]]
 do
